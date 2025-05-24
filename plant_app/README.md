@@ -1,16 +1,52 @@
-# plant_app
+# 🌿 Smart Greenhouse App
 
-A new Flutter project.
+A smart greenhouse system combining **Flutter**, **Firebase**, and **AI (VGG19)** to provide intelligent, real-time monitoring and management of plant environments. Designed for modern agriculture, it empowers users to track conditions, automate actions, and detect potential plant issues using deep learning.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 📌 Project Overview
 
-A few resources to get you started if this is your first Flutter project:
+This app enables farmers and garden enthusiasts to:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Monitor temperature, humidity, light, and soil moisture in real time.
+- Automatically control irrigation, lighting, and ventilation systems.
+- Receive alerts on abnormal conditions.
+- Detect potential plant diseases via VGG19 image classification.
+- Control everything remotely through a beautiful Flutter-based app.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🌟 Key Features
+
+- 📲 **Cross-platform Flutter App** (Android & iOS)
+- 🔥 **Firebase Integration** (Auth, Realtime Database, Storage)
+- 🧠 **AI-Powered Plant Analysis** using **VGG19**
+- 📡 Live sensor data from ESP32 + DHT11, Soil Moisture, LDR
+- 📈 Historical data visualization (charts and logs)
+- 🚨 Notifications for environmental anomalies
+- 🧪 Image upload & analysis to detect leaf issues
+
+---
+
+## 🛠️ Technologies Used
+
+| Category            | Tools Used                                      |
+|---------------------|-------------------------------------------------|
+| **Frontend**        | Flutter                                         |
+| **Backend/Database**| Firebase (Auth, Realtime DB)|
+| **Hardware**        | ESP32, DHT11, Soil Moisture Sensor, LDR         |
+| **AI Model**        | VGG19 (TensorFlow / Python Flask API)           |
+| **Communication**   | REST API / Firebase Functions                   |
+
+---
+
+## 🧱 System Architecture
+
+```plaintext
+[ Sensors ] → [ ESP32 ] → [ Firebase Realtime DB ]
+                                ↓
+                        [ Flutter Mobile App ]
+                                ↓
+                  [ Upload Leaf Image ] → [ Flask API + VGG19 ]
+                                              ↓
+                                    [ Disease Prediction ]
